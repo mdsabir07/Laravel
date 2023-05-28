@@ -1,8 +1,7 @@
 <?php
-use App\Http\Controllers\DemoController;
-use App\Http\Middleware\DemoMiddleware;
+
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
 
-Route::get('/hello',[DemoController::class,'DemoAction2']);
-
+Route::get('/{num1}/{num2}',[HomeController::class,'page']);
