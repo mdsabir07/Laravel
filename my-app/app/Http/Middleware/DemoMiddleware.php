@@ -17,7 +17,10 @@ class DemoMiddleware
     {
 //        $request->headers->add(["email"=>"muhammed@sabir.com"]);
 //        $request->headers->replace(["email"=>"muhammed@gmail.com"]);
-        $request->headers->remove("email");
+        $key=$request->key;
+        if($key=="home"){
+            return redirect("/")
+        }
         return $next($request);
 
     }
